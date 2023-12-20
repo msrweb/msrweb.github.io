@@ -1,6 +1,37 @@
 ---
 layout: splash
 permalink: /
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/banner-gradient.jpg
+  actions:
+    - label: "Get Started"
+      url: "#"
+excerpt: >
+  Description about this project uscipit, lorem sed sollicitudin tempus, libero diam dapibus dolor, semper semper.<br />
+  <small><a href="#">Latest release v2.5.0</a></small>
+feature_row:
+  - image_path: assets/images/feature-image-1.jpg
+    alt: "Feature One image description"
+    title: "Feature One"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: "#"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: assets/images/feature-image-2.jpg
+    alt: "Feature Two image description"
+    title: "Feature Two"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: "#"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: assets/images/feature-image-3.jpg
+    alt: "Feature Three image description"
+    title: "Feature Three"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: "#"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row %}
