@@ -1,2 +1,10 @@
 remote_theme: "mmistakes/minimal-mistakes"
 title: "Test Site"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
