@@ -5,9 +5,40 @@ search: false
 
 @charset "utf-8";
 
+@font-face {
+	font-family: "MWF-MDL2";
+	src: url("../fonts/MWFMDL2.woff") format("woff"),
+		 url("../fonts/MWFMDL2.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "SegoeUI";
+	src: local("Segoe UI"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
+	font-weight: 400; }
+
+@font-face {
+	font-family: "SegoeUI";
+	src: local("Segoe UI Light"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.svg#web") format("svg");
+	font-weight: 100; }
+
+@font-face {
+	font-family: "SegoeUI";
+	src: local("Segoe UI Semilight"), local("Segoe UI"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.svg#web") format("svg");
+	font-weight: 200; }
+
+@font-face {
+	font-family: "SegoeUI";
+	src: local("Segoe UI Semibold"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.svg#web") format("svg");
+	font-weight: 600; }
+
+@font-face {
+	font-family: "SegoeUI";
+	src: local("Segoe UI Bold"), local("Segoe UI"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.svg#web") format("svg");
+	font-weight: 700; }
+
 $doc-font-size: 16 !default;
 
-$sans-serif: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
 
@@ -25,20 +56,20 @@ $linkedin-color: #007bb6 !default;
 
 $link-color: $primary-action-color;
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-
 $buttoncolors:
-  (primary, #0067b8),
-  (inverse, #fff),
-  (light-outline, transparent),
-  (success, $success-color),
-  (warning, $warning-color),
-  (danger, $danger-color),
-  (info, $info-color),
-  (facebook, $facebook-color),
-  (twitter, $twitter-color),
-  (linkedin, $linkedin-color);
+	(primary, #0067b8),
+	(inverse, #fff),
+	(light-outline, transparent),
+	(success, $success-color),
+	(warning, $warning-color),
+	(danger, $danger-color),
+	(info, $info-color),
+	(facebook, $facebook-color),
+	(twitter, $twitter-color),
+	(linkedin, $linkedin-color);
+
+@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 
 html {
 	font-size: #{$doc-font-size}px;
@@ -94,6 +125,52 @@ html {
 	}
 
 	.greedy-nav {
+		.greedy-nav__toggle {
+			.navicon {
+				height: 1.3rem;
+				font-size: 1.25rem;
+				background: none;
+				font-family: "MWF-MDL2";
+			
+				&::after {
+					content: "\E700";
+					background: none;
+					bottom: initial;
+				}
+			
+				&::before {
+					display:none;
+				}
+			}
+			
+			&.close {
+				.navicon {
+					&::after {
+						content: "\E711";
+						transform: none;
+					}
+			
+					&::before {
+						display:none;
+					}
+				}
+			}
+		
+			&:hover {
+				.navicon {
+					background: none;
+		
+					&::after {
+						background: none;
+					}
+			
+					&::before {
+						background: none;
+					}
+				}
+			}
+		}
+
 		.visible-links {
 			a {
 				&:before {
@@ -116,6 +193,45 @@ html {
 	}
 }
 
+.nav__list {
+	@media (max-width: 63.9375em) {
+		label {
+			&:before,
+			&:after,
+			&:hover:before,
+			&:hover:after {
+				background: none;
+			}
+
+			&:before {
+				font-family: "MWF-MDL2";
+				content: "\E70D";
+				width: 1em;
+				right: 1em;
+				top: 1.15em;
+				font-size: 0.65rem;
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+		input:checked {
+			&+label:hover:after,
+			label:hover:after {
+				display: none;
+			}
+
+			&+label:hover:before,
+			label:hover:before {
+				background: none;
+				content: "\E70E";
+			}
+		}
+	}
+}
+
 .feature__wrapper{
 	border-bottom: none;
 }
@@ -125,6 +241,10 @@ html {
 }
 
 .sidebar {
+	@media (min-width: 80em) {
+		padding-right: 1.5em;
+	}
+
 	li {
 		font-size: 1em;
 
@@ -135,12 +255,26 @@ html {
 	}
 
 	.nav__list {
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+
+			@media (max-width: 63.9375em) {
+				& {
+					padding: 0 0;
+				}
+			}
+		}
+
 		.nav__items {
 			font-size: 1em;
 		}
 
 		.nav__sub-title {
-			font-size: 1em;
+			text-transform: initial;
+			font-size: 1.1875rem;
+			border-bottom: 1px solid #d2d2d2;
 		}
 	}
 }

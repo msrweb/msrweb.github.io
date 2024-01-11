@@ -1,6 +1,6 @@
 ---
-title: "Quick-Start Guide"
-permalink: /docs/quick-start-guide/
+title: "Page Title"
+permalink: /docs/section-1-page-1/
 excerpt: "Get started nullam suscipit dolor."
 last_modified_at: 2023-12-01
 toc: true
