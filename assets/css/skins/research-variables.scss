@@ -1,0 +1,42 @@
+/**
+ * Research skin variables
+ */
+$doc-font-size: 16 !default;
+
+$sans-serif: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$global-font-family: $sans-serif !default;
+$header-font-family: $sans-serif !default;
+
+$primary-color: #6f777d !default;
+$primary-action-color: #0067b8 !default;
+$success-color: #3fa63f !default;
+$warning-color: #d67f05 !default;
+$danger-color: #ee5f5b !default;
+$info-color: #3b9cba !default;
+$focus-color: $primary-color !default;
+$active-color: mix(#fff, $primary-color, 80%) !default;
+$facebook-color: #3b5998 !default;
+$twitter-color: #55acee !default;
+$linkedin-color: #007bb6 !default;
+$link-color: $primary-action-color !default;
+$masthead-link-color: mix(#000, $primary-color, 25%) !default;
+$masthead-link-color-hover: $masthead-link-color !default;
+
+$h-size-1: 3.125rem !default;
+$h-size-2: 2.3125rem !default;
+$h-size-3: 1.8125rem !default;
+$h-size-4: 1.5rem !default;
+$h-size-5: 1.3125rem !default;
+$h-size-6: 1.1875rem !default;
+
+$buttoncolors:
+	(primary, #0067b8),
+	(inverse, #fff),
+	(light-outline, transparent),
+	(success, $success-color),
+	(warning, $warning-color),
+	(danger, $danger-color),
+	(info, $info-color),
+	(facebook, $facebook-color),
+	(twitter, $twitter-color),
+	(linkedin, $linkedin-color) !default;

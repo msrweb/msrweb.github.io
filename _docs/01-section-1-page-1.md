@@ -9,7 +9,7 @@ classes: wide
 
 Nullam suscipit, lorem sed sollicitudin tempus, libero diam dapibus dolor, semper semper elit arcu sed justo. Sed molestie, ligula id lobortis cursus, lorem lacus fermentum odio, eu lacinia nunc nisi eget orci. Quisque ornare purus eget elit sodales interdum at id nisi. Morbi mollis ultrices venenatis. Cras et mauris lectus.
 
-# Installation Steps
+## Installation Steps
 
 1. Nullam suscipit, lorem sed sollicitudin tempus, libero diam dapibus dolor, semper semper elit arcu sed justo.
 2. Sed molestie, ligula id lobortis cursus, lorem lacus fermentum odio, eu lacinia nunc nisi eget orci. Quisque ornare purus eget elit sodales interdum at id nisi.
@@ -20,7 +20,7 @@ Nullam suscipit, lorem sed sollicitudin tempus, libero diam dapibus dolor, sempe
 
 Suspendisse vulputate blandit dui eu volutpat [here](#). Cras vitae risus ipsum. Nam lacinia porttitor mauris, et ullamcorper sem adipiscing ac. Aliquam id nisi eu lectus placerat tristique at at mauris. Fusce nibh ante, interdum sit amet ullamcorper sed, convallis sit amet ligula. Vivamus eu laoreet lorem. Curabitur sit amet metus eu nunc tincidunt eleifend a eu justo. Aenean non ante id ligula vestibulum venenatis vel at justo. Suspendisse rhoncus volutpat lacus sit amet luctus. Aliquam erat volutpat. Praesent vitae eros ac leo iaculis cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vitae lorem sit amet turpis cursus fermentum. Nulla rhoncus hendrerit odio, vel cursus risus vulputate ut. Proin eros turpis, facilisis ut tincidunt et, mollis venenatis nisi. Phasellus in mi vel mi eleifend consectetur.
 
-# Code Example
+## Code Example
 
 ```cs
 const hashValue = val =>
